@@ -46,29 +46,29 @@ User.create(name: "Jessica", email: "jessicajohn@gmail.com", password: "123", ad
 
 puts "beers"
  
-Beer.create(name: "Festival", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-23_at_4.51.10_PM_9IFz4qQyB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648068705017", flavor: "Fruit & Spice", brewery_id: 1, beer_style_id: 2, user_id: 1 )
+Beer.create(name: "Festival", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-23_at_4.51.10_PM_9IFz4qQyB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648068705017", flavor: "Fruity", brewery_id: 1, beer_style_id: 2, user_id: 1 )
  
-Beer.create(name: "Double PB & Jeff W/ Strawberry", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.00.25_PM_w5Lpay1b6R.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647550859647", flavor: "Malty & Sweet", brewery_id: 1, beer_style_id: 7, user_id: 1)
+Beer.create(name: "Double PB & Jeff W/ Strawberry", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.00.25_PM_w5Lpay1b6R.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647550859647", flavor: "Malty/Sweet", brewery_id: 1, beer_style_id: 7, user_id: 1)
  
-Beer.create(name: "Nature Calls", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.02.16_PM_8BS_ubC8H4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647550949146", flavor: "Fruit & Spice", brewery_id: 2, beer_style_id: 3, user_id: 2 )
+Beer.create(name: "Nature Calls", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.02.16_PM_8BS_ubC8H4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647550949146", flavor: "Fruity", brewery_id: 2, beer_style_id: 3, user_id: 2 )
  
-Beer.create(name: "Guava Crush", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.05.38_PM_vndrqNYcnl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647551151315", flavor: "Crisp & Clean", brewery_id: 2, beer_style_id: 2, user_id: 2)
+Beer.create(name: "Guava Crush", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.05.38_PM_vndrqNYcnl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647551151315", flavor: "Crisp", brewery_id: 2, beer_style_id: 2, user_id: 2)
  
-Beer.create(name: "Anomaly", image: "https://ik.imagekit.io/vonlhgv94ld/Monkish-Brewing-Logo_0VAv2Vlwq.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068796226", flavor: "Dark & Roasty", brewery_id: 3, beer_style_id: 2, user_id: 3 )
+Beer.create(name: "Anomaly", image: "https://ik.imagekit.io/vonlhgv94ld/Monkish-Brewing-Logo_0VAv2Vlwq.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068796226", flavor: "Dark/Roasty", brewery_id: 3, beer_style_id: 2, user_id: 3 )
  
-Beer.create(name: "Foggy Window", image: "https://ik.imagekit.io/vonlhgv94ld/Monkish-Brewing-Logo_0VAv2Vlwq.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068796226", flavor: "Hoppy & Bitter", brewery_id: 3, beer_style_id: 3, user_id: 3)
+Beer.create(name: "Foggy Window", image: "https://ik.imagekit.io/vonlhgv94ld/Monkish-Brewing-Logo_0VAv2Vlwq.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068796226", flavor: "Hoppy/Bitter", brewery_id: 3, beer_style_id: 3, user_id: 3)
  
-Beer.create(name: "Spun Monkey", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.17.54_PM_2JnhvCrVOe.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647551887254", flavor: "Malty & Sweet", brewery_id: 4, beer_style_id: 5, user_id: 1)
+Beer.create(name: "Spun Monkey", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.17.54_PM_2JnhvCrVOe.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647551887254", flavor: "Malty/Sweet", brewery_id: 4, beer_style_id: 5, user_id: 1)
  
-Beer.create(name: "Scorched Meadows - Hazy", image: "https://ik.imagekit.io/vonlhgv94ld/scorched_meadows_beer_OBDkMeqLo6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1647552366775", flavor: "Crisp & Clean", brewery_id: 4, beer_style_id: 5, user_id: 1)
+Beer.create(name: "Scorched Meadows - Hazy", image: "https://ik.imagekit.io/vonlhgv94ld/scorched_meadows_beer_OBDkMeqLo6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1647552366775", flavor: "Crisp", brewery_id: 4, beer_style_id: 5, user_id: 1)
  
-Beer.create(name: "Harbor Ale", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.32.39_PM_mRW2wg5CD5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647552771524", flavor: "Malty & Sweet", brewery_id: 5, beer_style_id: 4, user_id: 2)
+Beer.create(name: "Harbor Ale", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.32.39_PM_mRW2wg5CD5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647552771524", flavor: "Malty/Sweet", brewery_id: 5, beer_style_id: 4, user_id: 2)
  
-Beer.create(name: "Summer Ale", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.37.06_PM_eouUPk2leW.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647553036996", flavor: "Crisp & Clean", brewery_id: 5, beer_style_id: 4, user_id: 2)
+Beer.create(name: "Summer Ale", image: "https://ik.imagekit.io/vonlhgv94ld/Screen_Shot_2022-03-17_at_5.37.06_PM_eouUPk2leW.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647553036996", flavor: "Crisp", brewery_id: 5, beer_style_id: 4, user_id: 2)
  
-Beer.create(name: "Finback IPA", image: "https://ik.imagekit.io/vonlhgv94ld/finback_brewery_uf08PXKxz.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068898997", flavor: "Hoppy & Bitter", brewery_id: 6, beer_style_id: 3, user_id: 3)
+Beer.create(name: "Finback IPA", image: "https://ik.imagekit.io/vonlhgv94ld/finback_brewery_uf08PXKxz.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068898997", flavor: "Hoppy/Bitter", brewery_id: 6, beer_style_id: 3, user_id: 3)
  
-Beer.create(name: "Star Child", image: "https://ik.imagekit.io/vonlhgv94ld/finback_brewery_uf08PXKxz.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068898997", flavor: "Sour, Tart & Funky", brewery_id: 6, beer_style_id: 8, user_id: 3)
+Beer.create(name: "Star Child", image: "https://ik.imagekit.io/vonlhgv94ld/finback_brewery_uf08PXKxz.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068898997", flavor: "Sour", brewery_id: 6, beer_style_id: 8, user_id: 3)
 
 puts "reviews"
  
