@@ -9,6 +9,25 @@ class ReviewsController < ApplicationController
         render json: review
     end
 
+    def create
+        review = Review.create!(review_params)
+        render json: review, status: :created 
+    end
+
+    def update
+        review = find_review
+        review.update!(review_params)
+        render json: review 
+    end
+
+    def destroy
+        review_del = find_review
+        review_del.destroy
+        head :no_content
+    end
+
+
+
     def beer_reviews
         reviews = Review.where(beer_id: params[:id])
         render json: reviews
@@ -16,6 +35,10 @@ class ReviewsController < ApplicationController
 
 
     private
+
+    def review_params
+        params.permit(:comment, :name, :rating, :beer_id)
+    end
 
     def find_review
         Review.find(params[:id])

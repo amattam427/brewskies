@@ -7,13 +7,17 @@ class BeersController < ApplicationController
     def show
         beer = find_beer
         render json: beer 
-
     end
 
     def brewery_beers
       beers = Beer.where(brewery_id: params[:id])
       render json: beers
     end
+
+
+
+
+
 
     private
 
