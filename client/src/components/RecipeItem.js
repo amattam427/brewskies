@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function RecipeItem ({id, name, description, image, ingredients}){
+function RecipeItem ({id, name, description, image}){
 
     return (
         <div>
