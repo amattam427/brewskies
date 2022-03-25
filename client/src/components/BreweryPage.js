@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import BreweryList from './BreweryList';
+import SearchList from './SearchList';
 
 
 
 function BreweryPage(){
     const [brewery, setBrewery] = useState ([])
+    const [searchTerm, setSearchTerm] = useState('')
 
 
     useEffect (()=>{
@@ -14,9 +16,14 @@ function BreweryPage(){
 
     }, [])
 
+    const filteredList = brewery.filter((brew)=>{
+        return brew.state.toLowerCase().includes(searchTerm.toLowerCase())
+    })
+
     return (
         <div>
-            <BreweryList brewery = {brewery}/>
+            <SearchList setSearchTerm = {setSearchTerm}/>
+            <BreweryList brewery = {filteredList}/>
         </div>
     )
 }
