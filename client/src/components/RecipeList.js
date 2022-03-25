@@ -1,9 +1,23 @@
 import React from 'react';
+import RecipeItem from './RecipeItem';
 
-function RecipeList() {
+function RecipeList({beerRecipe}) {
 
     return (
-        <h1>Recipe2</h1>
+        <div>
+            {beerRecipe.map((recipe)=>{
+                return (
+                    <RecipeItem 
+                        key = {recipe.id}
+                        id = {recipe.id}
+                        name = {recipe.name}
+                        description = {recipe.description}
+                        image = {recipe.image_url}
+                        ingredients = {recipe.ingredients}
+                        />
+                )
+            })}
+        </div>
     )
 }
 

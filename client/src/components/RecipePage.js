@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import RecipeList from './RecipeList';
 
 function RecipePage() {
+    const [beerRecipe, setBeerRecipe] = useState ([])
+
+    useEffect (()=>{
+        fetch ('https://api.punkapi.com/v2/beers')
+        .then ((r)=>r.json())
+        .then(setBeerRecipe)
+    }, [])
+
 
     return (
         <div>
-            <h1>Hello</h1>
+           <RecipeList beerRecipe={beerRecipe}/>
         </div>
     )
 }
