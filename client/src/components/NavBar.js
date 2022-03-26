@@ -8,6 +8,9 @@ function NavBar(){
         <div className = 'navbar'>
             <Link to = 'recipes'>
             DIY at Home Brewery
+            </Link> <br/>
+            <Link to = '/'>
+                Home
             </Link>
         </div>
     )
