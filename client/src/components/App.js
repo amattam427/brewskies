@@ -4,6 +4,7 @@ import Header from './Header';
 import NavBar from './NavBar';
 import RecipePage from './RecipePage';
 import BreweryPage from './BreweryPage';
+import BeersPage from './BeersPage';
 // import Ingredients from './Ingredients';
 
 import {Route, Routes} from "react-router-dom";
@@ -18,6 +19,7 @@ function App() {
 
         <Route path = 'recipes' element={<RecipePage/>}/>
         {/* <Route path = ':id' element={<Ingredients/>}/> */}
+        <Route path = 'brewery/:id' element={<BeersPage/>}/>
 
         <Route path = '/' element={<BreweryPage/>}/>
 
