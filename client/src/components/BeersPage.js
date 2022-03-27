@@ -11,7 +11,7 @@ function BeersPage(){
         fetch(`/breweries/${id}/beers`)
         .then((r)=>r.json())
         .then((data)=>{
-            console.log(data)
+            //console.log(data)
             setBeers(data)
         })
     }, [id])
