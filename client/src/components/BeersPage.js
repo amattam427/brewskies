@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
+import BeersPageList from './BeersPageList';
 
 
 function BeersPage(){
@@ -17,7 +18,7 @@ function BeersPage(){
 
     return (
         <div className="brewery-beers">
-           <h2>Name: {beers.name}</h2> 
+            <BeersPageList beers = {beers}/>
 
         </div>
     )

@@ -7,4 +7,6 @@ class BeerSerializer < ActiveModel::Serializer
   def beer_style
     object.beer_style.name 
   end
+
+
 end
