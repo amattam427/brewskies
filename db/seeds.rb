@@ -8,17 +8,17 @@
 
 puts "breweries"
  
-b1 = Brewery.create(name: "10-56 Brewing Company", street: "400 Brown Cir", city: "Knox", state: "Indiana", phone_number: "6308165790", image: "https://ik.imagekit.io/vonlhgv94ld/1056_logo_dc5gPCv60.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648326990949")
+b1 = Brewery.create(name: "10-56 Brewing Company", street: "400 Brown Cir", city: "Knox", state: "Indiana", phone_number: "630-816-5790", image: "https://ik.imagekit.io/vonlhgv94ld/1056_logo_dc5gPCv60.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648326990949")
  
-b2 = Brewery.create(name: "10 Barrel Brewing Co", street: "62970 18th St", city: "Bend", state: "Oregon", phone_number: "5415851007", image: "https://ik.imagekit.io/vonlhgv94ld/10-barrel-logo-square_9EiS-EtJJ.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648327323071")
+b2 = Brewery.create(name: "10 Barrel Brewing Co", street: "62970 18th St", city: "Bend", state: "Oregon", phone_number: "541-585-1007", image: "https://ik.imagekit.io/vonlhgv94ld/10-barrel-logo-square_9EiS-EtJJ.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648327323071")
  
-b3 = Brewery.create(name: "Monkish Brewing Co", street: "20311 South Western Avenue", city: "Torrance", state: "California", phone_number: "3102952157", image: "https://ik.imagekit.io/vonlhgv94ld/Monkish-Brewing-Logo_0VAv2Vlwq.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068796226")
+b3 = Brewery.create(name: "Monkish Brewing Co", street: "20311 South Western Avenue", city: "Torrance", state: "California", phone_number: "310-295-2157", image: "https://ik.imagekit.io/vonlhgv94ld/Monkish-Brewing-Logo_0VAv2Vlwq.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068796226")
  
-b4 = Brewery.create(name: "HUDL Brewing Company", street: "1327 S Main St Ste 100", city: "Las Vegas", state: "Nevada", phone_number: "7024457100", image: "https://ik.imagekit.io/vonlhgv94ld/ek1h9ktyrgwn6x3jx52jvucunzsr_AgApTbno2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648327486631")
+b4 = Brewery.create(name: "HUDL Brewing Company", street: "1327 S Main St Ste 100", city: "Las Vegas", state: "Nevada", phone_number: "702-445-7100", image: "https://ik.imagekit.io/vonlhgv94ld/ek1h9ktyrgwn6x3jx52jvucunzsr_AgApTbno2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648327486631")
  
 b5 = Brewery.create(name: "Greenport Harbor Brewing Company", street: "234 Carpenter Street", city: "Greenport", state: "New York", phone_number: "6314776681", image: "https://ik.imagekit.io/vonlhgv94ld/static1.squarespace_KKXxHmu_8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648327561256")
  
-b6 = Brewery.create(name: "Finback Brewery", street: "78-01 77th Ave", city: "Glendale", state: "New York", phone_number: "7186288600", image: "https://ik.imagekit.io/vonlhgv94ld/finback_brewery_uf08PXKxz.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068898997")
+b6 = Brewery.create(name: "Finback Brewery", street: "78-01 77th Ave", city: "Glendale", state: "New York", phone_number: "718-628-8600", image: "https://ik.imagekit.io/vonlhgv94ld/finback_brewery_uf08PXKxz.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648068898997")
 
 puts "beer styles"
  
