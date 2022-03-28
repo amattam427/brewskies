@@ -9,6 +9,23 @@ class BeersController < ApplicationController
         render json: beer 
     end
 
+    def create
+        beer = Beer.create!(beer_params)
+        render json: beer, status: :created
+    end
+
+    def update
+        beer = find_beer
+        beer.update!(beer_params)
+        render json: beer
+    end
+
+    def destroy
+        beer_del = find_beer
+        beer_del.destroy
+        head :no_content
+    end
+
     def brewery_beers
       beers = Beer.where(brewery_id: params[:id])
       render json: beers
@@ -20,6 +37,10 @@ class BeersController < ApplicationController
 
 
     private
+
+    def beer_params
+        params.permit(:name, :image, :flavor, :brewery_id, :beer_style_id, :user_id)
+    end
 
     def find_beer 
         Beer.find(params[:id])
