@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         params.permit(:name, :password, :email, :admin)
     end
 
-    # def find_user
-    #     User.find(params[:id])
-    # end
+    def find_user
+        User.find(params[:id])
+    end
 end
