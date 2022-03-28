@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom"
+//import BeersReviewPage from './BeersReviewPage';
 
 
 function BeersPageItem({id, name, image, flavor, style}){

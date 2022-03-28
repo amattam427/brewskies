@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import RecipePage from './RecipePage';
 import BreweryPage from './BreweryPage';
 import BeersPage from './BeersPage';
-// import BeersReviewPage from './BeersReviewPage';
+import BeersReviewPage from './BeersReviewPage';
 // import Ingredients from './Ingredients';
 
 import {Route, Routes} from "react-router-dom";
@@ -22,7 +22,7 @@ function App() {
         {/* <Route path = ':id' element={<Ingredients/>}/> */}
         <Route path = 'brewery/:id' element={<BeersPage/>}/>
 
-        {/* <Route path = 'beer/:id' element={<BeersReviewPage/>}/> */}
+        <Route path = 'brewery/:id/beer/:id' element={<BeersReviewPage/>}/>
 
         <Route path = '/' element={<BreweryPage/>}/>
 
