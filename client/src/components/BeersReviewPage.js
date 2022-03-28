@@ -9,6 +9,13 @@ function BeersReviewPage(){
 
     const {id} = useParams();
     const [reviews, setBeerReviews] = useState ([])
+    // const [reviews, setBeerReviews] = useState ([{
+    // "id": 1,
+    // "comment": "",
+    // "name": "",
+    // "rating": 5,
+    // "beer_id": 1
+    // }])
 
     useEffect (()=>{
         fetch(`/beers/${id}/reviews`)
@@ -43,9 +50,16 @@ function BeersReviewPage(){
 
 
 
+
+
+
+
+
+
     return (
         <div className="reviews-body">
              <h1>Reviews</h1>
+        
             <BeersReviewList reviews={reviews} onAddReview={handleAddReview} onDeleteReview={handleDeleteReview} onUpdateReview={handleUpdateReview}/>
             {/* <NewReviewForm key={reviews.beer_id} onAddReview={handleAddReview} beersId={reviews.beer_id} /> */}
             

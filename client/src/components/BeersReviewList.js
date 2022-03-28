@@ -1,15 +1,35 @@
 import React from 'react';
 
 import BeersReviewItem from './BeersReviewItem';
-// import NewReviewForm from './NewReviewForm';
+//import NewReviewForm from './NewReviewForm';
 
 
 function BeersReviewList({reviews, onAddReview, onDeleteReview, onUpdateReview}){
 
 
+    // const reviewList = reviews.map((r)=>
+    //     <BeersReviewItem
+    //         key={r.id}
+    //         reviewId={r.id}
+    //         review={r.comment}
+    //         author={r.name}
+    //         rating={r.rating}
+    //         onDeleteReview={onDeleteReview}
+    //         onUpdateReview={onUpdateReview}
+    //         />
+    // )
+
+
+
+
 
     return (
         <div className="brewery-reviews">
+
+            {/* <>
+                {reviewList}
+            </> */}
+         
             {reviews.map((r)=>{
                 return (
                     <BeersReviewItem
@@ -22,12 +42,11 @@ function BeersReviewList({reviews, onAddReview, onDeleteReview, onUpdateReview})
                         onAddReview={onAddReview}
                         onDeleteReview={onDeleteReview}
                         onUpdateReview={onUpdateReview}
-                        // onDeleteReview={onDeleteReview}
                         />
                 )
                 
             })}
-            {/* <NewReviewForm onAddReview={onAddReview} beersId={reviews.beer_id}/> */}
+            {/* <NewReviewForm key={reviews.beer_id} onAddReview={onAddReview} beersId={reviews.beer_id}/> */}
     
         </div>
     )

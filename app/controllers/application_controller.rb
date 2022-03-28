@@ -4,6 +4,16 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_invalid_response
 
+  before_action :authorize
+  
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
+  
+  def authorize
+    render json: { errors: ["Not authorized"] }, status: :unauthorized unless current_user
+  end
+
 
 private
 
