@@ -4,7 +4,7 @@ import BeersReviewItem from './BeersReviewItem';
 // import NewReviewForm from './NewReviewForm';
 
 
-function BeersReviewList({reviews, onAddReview, onDeleteReview}){
+function BeersReviewList({reviews, onAddReview, onDeleteReview, onUpdateReview}){
 
 
 
@@ -21,6 +21,7 @@ function BeersReviewList({reviews, onAddReview, onDeleteReview}){
                         beersId={r.beer_id}
                         onAddReview={onAddReview}
                         onDeleteReview={onDeleteReview}
+                        onUpdateReview={onUpdateReview}
                         // onDeleteReview={onDeleteReview}
                         />
                 )
