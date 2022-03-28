@@ -25,17 +25,17 @@ function BeersReviewPage(){
         setBeerReviews(updatedReviewArr);
     }
 
-    // function handleDeleteReview(id){
-    //     const updatedReviewArr = beerReviews.filter((reviews)=> reviews.id !== id);
-    //     setBeerReviews(updatedReviewArr)
-    // }
+    function handleDeleteReview(id){
+        const updatedReviewArr = reviews.filter((reviews)=> reviews.id !== id);
+        setBeerReviews(updatedReviewArr)
+    }
 
 
 
     return (
         <div className="reviews-body">
              <h1>Reviews</h1>
-            <BeersReviewList reviews={reviews} onAddReview={handleAddReview}/>
+            <BeersReviewList reviews={reviews} onAddReview={handleAddReview} onDeleteReview={handleDeleteReview}/>
             {/* <NewReviewForm key={reviews.beer_id} onAddReview={handleAddReview} beersId={reviews.beer_id} /> */}
             
         </div>
