@@ -1,9 +1,10 @@
 import React from 'react';
 
 import BeersReviewItem from './BeersReviewItem';
+// import NewReviewForm from './NewReviewForm';
 
 
-function BeersReviewList({reviews}){
+function BeersReviewList({reviews, onAddReview}){
 
 
 
@@ -17,10 +18,14 @@ function BeersReviewList({reviews}){
                         review={r.comment}
                         author={r.name}
                         rating={r.rating}
+                        beersId={r.beer_id}
+                        onAddReview={onAddReview}
+                        // onDeleteReview={onDeleteReview}
                         />
                 )
                 
             })}
+            {/* <NewReviewForm onAddReview={onAddReview} beersId={reviews.beer_id}/> */}
     
         </div>
     )
