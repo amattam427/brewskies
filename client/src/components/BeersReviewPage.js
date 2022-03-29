@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
-import BeersReviewList from './BeersReviewList';
+import BeersReviewItem from './BeersReviewItem';
+//import BeersReviewList from './BeersReviewList';
 //import NewReviewForm from './NewReviewForm';
 
 
@@ -9,13 +10,12 @@ function BeersReviewPage(){
 
     const {id} = useParams();
     const [reviews, setBeerReviews] = useState ([])
-    // const [reviews, setBeerReviews] = useState ([{
-    // "id": 1,
-    // "comment": "",
-    // "name": "",
-    // "rating": 5,
-    // "beer_id": 1
-    // }])
+
+    const [comment, setComment] = useState("");
+    const [rating, setRating] = useState(0);
+    const [name, setName] = useState("");
+
+
 
     useEffect (()=>{
         fetch(`/beers/${id}/reviews`)
@@ -27,7 +27,7 @@ function BeersReviewPage(){
     }, [id])
 
 
-    function handleAddReview(newReview){
+    const onAddReview = function handleAddReview(newReview){
         const updatedReviewArr = [...reviews, newReview];
         setBeerReviews(updatedReviewArr);
     }
@@ -48,6 +48,41 @@ function BeersReviewPage(){
         setBeerReviews(updatedReviewArr)
     }
 
+    function handleReviewSubmit(e){
+        e.preventDefault();
+        fetch('http://localhost:3000/reviews', {
+            method: "POST",
+            headers:{
+                "Accept":"application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                comment: comment,
+                rating: rating,
+                name: name,
+                beer_id: id
+            }),
+        })
+                .then((r)=>r.json())
+                .then((newReview)=>onAddReview(newReview))
+                // setComment('');
+                // setName('');
+                // setRating(0);
+    }
+
+    const reviewList = reviews.map((r)=>
+        <BeersReviewItem
+            key={r.id}
+            reviewId={r.id}
+            review={r.comment}
+            author={r.name}
+            rating={r.rating}
+            onDeleteReview={handleDeleteReview}
+            onUpdateReview={handleUpdateReview}
+            />
+
+    )
+
 
 
 
@@ -59,8 +94,16 @@ function BeersReviewPage(){
     return (
         <div className="reviews-body">
              <h1>Reviews</h1>
+             <div>{reviewList}</div>
+             <h2>Write a Review</h2>
+            <form onSubmit={handleReviewSubmit}>
+                <input className="review-comment" type="text" name="comment" placeholder="Write a Review!" value={comment} onChange={(e)=>setComment(e.target.value)}/>
+                <input className="review-name" type="text" name="name" placeholder="Your Name" value={name} onChange={(e)=>setName(e.target.value)}/>
+                <input className="review-rating" type="number" name="rating" placeholder="" value={rating} onChange={(e)=>setRating(e.target.value)}/>
+               <button type="submit">Submit</button>
+             </form>
         
-            <BeersReviewList reviews={reviews} onAddReview={handleAddReview} onDeleteReview={handleDeleteReview} onUpdateReview={handleUpdateReview}/>
+            {/* <BeersReviewList reviews={reviews} onAddReview={handleAddReview} onDeleteReview={handleDeleteReview} onUpdateReview={handleUpdateReview}/> */}
             {/* <NewReviewForm key={reviews.beer_id} onAddReview={handleAddReview} beersId={reviews.beer_id} /> */}
             
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BeersReviewItem from './BeersReviewItem';
+//import BeersReviewItem from './BeersReviewItem';
 //import NewReviewForm from './NewReviewForm';
 
 
@@ -30,7 +30,7 @@ function BeersReviewList({reviews, onAddReview, onDeleteReview, onUpdateReview})
                 {reviewList}
             </> */}
          
-            {reviews.map((r)=>{
+            {/* {reviews.map((r)=>{
                 return (
                     <BeersReviewItem
                         key={r.id}
@@ -45,7 +45,7 @@ function BeersReviewList({reviews, onAddReview, onDeleteReview, onUpdateReview})
                         />
                 )
                 
-            })}
+            })} */}
             {/* <NewReviewForm key={reviews.beer_id} onAddReview={onAddReview} beersId={reviews.beer_id}/> */}
     
         </div>
