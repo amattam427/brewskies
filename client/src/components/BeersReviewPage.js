@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import BeersReviewItem from './BeersReviewItem';
-//import BeersReviewList from './BeersReviewList';
-//import NewReviewForm from './NewReviewForm';
+
 
 
 
@@ -65,9 +64,9 @@ function BeersReviewPage(){
         })
                 .then((r)=>r.json())
                 .then((newReview)=>onAddReview(newReview))
-                // setComment('');
-                // setName('');
-                // setRating(0);
+                setComment('');
+                setName('');
+                setRating(0);
     }
 
     const reviewList = reviews.map((r)=>
@@ -102,9 +101,6 @@ function BeersReviewPage(){
                 <input className="review-rating" type="number" name="rating" placeholder="" value={rating} onChange={(e)=>setRating(e.target.value)}/>
                <button type="submit">Submit</button>
              </form>
-        
-            {/* <BeersReviewList reviews={reviews} onAddReview={handleAddReview} onDeleteReview={handleDeleteReview} onUpdateReview={handleUpdateReview}/> */}
-            {/* <NewReviewForm key={reviews.beer_id} onAddReview={handleAddReview} beersId={reviews.beer_id} /> */}
             
         </div>
     ) 
