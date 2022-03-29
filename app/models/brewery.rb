@@ -1,7 +1,8 @@
 class Brewery < ApplicationRecord
+    belongs_to :user
     has_many :beers 
     has_many :beer_styles, through: :beers
-    has_many :users, through: :beers
+   
 
     validates :name, presence: true
     validates :city, presence: true
