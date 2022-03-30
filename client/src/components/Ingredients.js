@@ -1,12 +1,15 @@
 import React from 'react';
 
 
-function Ingredients(){
+function Ingredients({id, malt_name}){
 
 
 
     return(
         <div className="ingredients-body">
+            <ul>
+                <li>{malt_name}</li>
+            </ul>
            
 
         </div>

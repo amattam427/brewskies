@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function RecipeItem ({id, name, description, image}){
+function RecipeItem ({id, name, description, image, ingredients}){
 
     const imageSize={
         width:'200px',
@@ -16,6 +16,7 @@ function RecipeItem ({id, name, description, image}){
             <img className= "recipe-image" style={imageSize} src={image} alt={name}/><br/>
             <h3>Ingredients</h3>
             <ul>
+                <li></li>
             </ul>
             </div>
         </div>

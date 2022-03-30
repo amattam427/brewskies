@@ -93,7 +93,7 @@ function BeersReviewPage(){
     return (
         <div className="reviews-body">
              <h1>Reviews</h1>
-             <div className="review-list">{reviewList}</div>
+             <div >{reviewList}</div>
              <h2>Write a Review</h2>
             <form onSubmit={handleReviewSubmit}>
                 <input className="review-comment" type="text" name="comment" placeholder="Write a Review!" value={comment} onChange={(e)=>setComment(e.target.value)}/>

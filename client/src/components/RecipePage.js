@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import RecipeList from './RecipeList';
+//import IngredientsList from './Ingredients';
 
 function RecipePage() {
     const [beerRecipe, setBeerRecipe] = useState ([])
@@ -14,6 +15,7 @@ function RecipePage() {
     return (
         <div>
            <RecipeList beerRecipe={beerRecipe}/>
+           {/* <IngredientsList beerRecipe={beerRecipe}/> */}
         </div>
     )
 }

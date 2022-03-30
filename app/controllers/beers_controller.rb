@@ -10,10 +10,10 @@ class BeersController < ApplicationController
     end
 
     def create
-        p params
-        p beer_params 
+        # p params
+        # p beer_params 
         beer = Beer.create!(beer_params)
-        render json: beer, status: :created, serializer: CustomBeerSerializer
+        render json: beer, status: :created
     end
 
     def update
@@ -39,7 +39,7 @@ class BeersController < ApplicationController
     private
 
     def beer_params
-        params.permit(:id, :name, :image, :flavor, :brewery_id, :beer_style_id)
+        params.permit(:name, :image, :flavor, :brewery_id, :beer_style)
     end
 
     def find_beer 

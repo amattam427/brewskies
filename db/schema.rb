@@ -10,27 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_29_193339) do
+ActiveRecord::Schema.define(version: 2022_03_30_094034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "beer_styles", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "beers", force: :cascade do |t|
     t.string "name"
     t.string "image"
     t.string "flavor"
     t.bigint "brewery_id", null: false
-    t.bigint "beer_style_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["beer_style_id"], name: "index_beers_on_beer_style_id"
+    t.string "beer_style"
     t.index ["brewery_id"], name: "index_beers_on_brewery_id"
   end
 
@@ -65,7 +57,6 @@ ActiveRecord::Schema.define(version: 2022_03_29_193339) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "beers", "beer_styles"
   add_foreign_key "beers", "breweries"
   add_foreign_key "reviews", "beers"
 end
