@@ -10,6 +10,8 @@ class BeersController < ApplicationController
     end
 
     def create
+        p params
+        p beer_params 
         beer = Beer.create!(beer_params)
         render json: beer, status: :created
     end

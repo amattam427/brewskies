@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-//import NewReviewForm from './NewReviewForm';
 import BeersReviewEdit from './BeersReviewEdit';
 
 function BeersReviewItem({onUpdateReview, onDeleteReview, reviewId, review, author, rating}){
