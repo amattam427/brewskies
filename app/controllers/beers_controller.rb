@@ -36,12 +36,10 @@ class BeersController < ApplicationController
 
 
 
-
-
     private
 
     def beer_params
-        params.permit(:name, :image, :flavor, :brewery_id, :beer_style_id, :user_id)
+        params.permit(:id, :name, :image, :flavor, :brewery_id, :beer_style_id)
     end
 
     def find_beer 
