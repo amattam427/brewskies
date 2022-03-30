@@ -1,5 +1,53 @@
 .App {
   text-align: center;
+  background-color: brown;
+}
+
+.header{
+  font-family: 'papyrus';
+  color: white;
+  font-size: x-large;
+}
+
+.brewery-find{
+  font-family: 'papyrus';
+  color: white
 }
 
 
+.brewery-list {
+  text-align: center;
+  font-family: 'papyrus';
+  color:brown;
+  background-color: black;
+  max-width: 950px;
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  padding: 40px 25px;
+  margin-top: 50px
+}
+
+
+.beer-item{
+  text-align: center;
+  font-family: 'papyrus';
+  color:brown;
+  background-color: black;
+  max-width: 950px;
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  padding: 40px 25px;
+  margin-top: 50px
+}
+
+.recipe-list{
+  text-align: center;
+  font-family: 'papyrus';
+  color:brown;
+  background-color: black;
+  max-width: 950px;
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  padding: 40px 25px;
+  margin-top: 50px
+}

@@ -6,7 +6,7 @@ function BreweryList({brewery}){
 
     return (
         <div className = "brewery">
-            <h1>Find a Brewery</h1>
+    
             {brewery.map((brew)=>{
                 return (
                     <BreweryItem
