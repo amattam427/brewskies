@@ -29,6 +29,11 @@ function BeersPage(){
         setBeers(updatedBeerArr);
     }
 
+    function handleDeleteBeer(id){
+        const updatedBeerArr = beers.filter((beer)=> beer.id !== id);
+        setBeers(updatedBeerArr)
+    }
+
     function handleBeerSubmit(e){
         e.preventDefault();
         fetch('http://localhost:3000/beers', {
@@ -41,7 +46,7 @@ function BeersPage(){
                 name: name,
                 image: image,
                 flavor: flavor,
-                beer_style_id: style,
+                beer_style_id: id,
                 brewery_id: id
             }),
         })
@@ -67,7 +72,7 @@ function BeersPage(){
                 <button type="submit">Add</button>
             </form>
             
-            <BeersPageList beers = {beers}/>
+            <BeersPageList beers = {beers} onDeleteBeer={handleDeleteBeer}/>
            
 
         </div>
