@@ -3,7 +3,16 @@ import {Link} from "react-router-dom"
 
 
 
+
+
 function BreweryItem({id, name, street, city, state, phone, image}){
+
+    const imageSize={
+        width:'400px',
+        height: '300px' 
+     }
+
+   
 
     return (
         <div className = "brewery-list">
@@ -12,7 +21,7 @@ function BreweryItem({id, name, street, city, state, phone, image}){
             <h3>{city}, {state}</h3>
             <h4>Contact: {phone}</h4>
             <Link to = {`brewery/${id}`}>
-            <img src={image} alt={name}/>
+            <img style={imageSize} src={image} alt={name}/>
             </Link>
 
         </div>

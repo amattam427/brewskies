@@ -22,6 +22,9 @@ function BreweryPage(){
 
     return (
         <div>
+            <div className = "brewery-find">
+            <h1>Find a Brewery</h1>
+            </div>
             <SearchList setSearchTerm = {setSearchTerm}/>
             <BreweryList brewery = {filteredList}/>
         </div>
