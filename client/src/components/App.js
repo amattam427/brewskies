@@ -6,6 +6,7 @@ import RecipePage from './RecipePage';
 import BreweryPage from './BreweryPage';
 import BeersPage from './BeersPage';
 import BeersReviewPage from './BeersReviewPage';
+
 // import Ingredients from './Ingredients';
 
 import {Route, Routes} from "react-router-dom";

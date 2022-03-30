@@ -5,6 +5,6 @@ class Beer < ApplicationRecord
 
 
   validates :name, presence: true
-  validates :flavor, presence: true, inclusion: { in: %w(Crisp Hoppy/Bitter Malty/Sweet Dark/Roasty Fruity Sour Tart/Funky)}
+  validates :flavor, presence: true
 
 end
