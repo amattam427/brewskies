@@ -46,7 +46,7 @@ function BeersPage(){
                 name: name,
                 image: image,
                 flavor: flavor,
-                beer_style_id: id,
+                beer_style_id: style,
                 brewery_id: id
             }),
         })

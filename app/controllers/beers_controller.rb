@@ -13,7 +13,7 @@ class BeersController < ApplicationController
         p params
         p beer_params 
         beer = Beer.create!(beer_params)
-        render json: beer, status: :created
+        render json: beer, status: :created, serializer: CustomBeerSerializer
     end
 
     def update
