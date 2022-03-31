@@ -1,6 +1,67 @@
 .App {
   text-align: center;
+  background-image: url("https://ik.imagekit.io/vonlhgv94ld/What-is-a-Flight-of-Beer-3_e38r1Tzk7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1648702524886");
+  background-size: cover;
+  background-position: center;
+  background-color: #cccccc;
+  /* background-color: brown; */
+}
+
+.nav {
+  list-style-type: none;
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
+  color: white;
   background-color: brown;
+  font-family: 'papyrus';
+  font-size: larger;
+  font-weight: bold;
+ 
+}
+
+.login{
+  padding: 6px;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-right: 16px;
+  font-size: 23px;
+}
+.login-p{
+  font-size: 20px;
+  font-weight: bold;
+}
+.search {
+  padding: 6px;
+  border: none;
+  font-size: 23px;
+}
+
+.email-btn{
+  font-size: 24px;
+  color: #fff;
+  background-color: brown;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.email-btn:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.review-comment{
+  width: 50%;
+  height: 50%
+}
+
+.review-name{
+  width: 20%;
+}
+
+.review-rating{
+  width: 10%;
 }
 
 .header{
@@ -9,18 +70,41 @@
   font-size: x-large;
 }
 
+.review-container{
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  padding: 20px 10px;
+  margin-top: 50px;
+  background-color: burlywood;
+}
+
+.login-body{
+  padding: 50px 40px;
+  margin-top: 50px
+}
+
+.reviews-body{
+
+  padding: 40px 25px;
+  margin-top: 50px
+
+}
 .brewery-find{
   font-family: 'papyrus';
   color: white
+}
+.rating-p{
+  font-weight: bold;
 }
 
 
 .brewery-list {
   text-align: center;
   font-family: 'papyrus';
+  font-size: 20px;
   color:brown;
   background-color: black;
-  max-width: 950px;
+  max-width: 750px;
   margin: 0 auto;
   border: 1px solid #e6e6e6;
   padding: 40px 25px;
@@ -29,6 +113,8 @@
 
 .review-list{
   text-align: center;
+  color:brown;
+  background-color: black;
   max-width: 950px;
   margin: 0 auto;
   border: 1px solid #e6e6e6;

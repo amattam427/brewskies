@@ -17,7 +17,7 @@ function RecipeItem ({id, name, description, image, ingredients}){
             <div className="div2">
             <img className= "recipe-image" style={imageSize} src={image} alt={name}/><br/>
             <h3>Ingredients</h3>
-            <ul>
+            <ol>
                 
                 {ingredients.malt.map((i)=>(
                     <li key = {i.id}>{i.name} <br/></li>
@@ -27,7 +27,7 @@ function RecipeItem ({id, name, description, image, ingredients}){
                 ))}
 
                 
-            </ul>
+            </ol>
             </div>
         </div>
     )

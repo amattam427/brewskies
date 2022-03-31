@@ -28,7 +28,7 @@ function BeersReviewItem({onUpdateReview, onDeleteReview, reviewId, review, auth
             ) : (
                 <div className="review-list">
                 <h2>{review}</h2>
-                <h3>Rating out of 5: {rating}</h3>
+                <h3>Rating: {rating}</h3>
                 <h4>-{author}</h4>
                 <div className="review-btn">
                 <button className="delete-btn" onClick={handleDelete}>Delete</button>

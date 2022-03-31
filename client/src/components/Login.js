@@ -36,11 +36,12 @@ function Login({onLogin}){
     
 
     return (
-        <div>
-        <div>Login Into Your Account!</div>
+        <div className="login-body">
+        <div className="login-p">Login Into Your Account!</div>
         <form onSubmit={handleSubmitLogin}>
-        <label htmlFor="email">Email: </label>
+        {/* <label className="email" htmlFor="email">Email: </label> */}
         <input 
+        className = "login"
         type="text"
         id="email"
         autoComplete="off"
@@ -51,6 +52,7 @@ function Login({onLogin}){
         />
 
         <input
+        className = "login"
         type="password"
         id="password"
         autoComplete="current-password"
@@ -60,7 +62,7 @@ function Login({onLogin}){
         onChange={handleInputChange}
         />
 
-    <button type="submit">Login</button>
+    <button className= "email-btn" type="submit">Login</button>
 
 
         </form>

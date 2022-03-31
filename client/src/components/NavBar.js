@@ -6,15 +6,14 @@ function NavBar(){
 
     return(
         <div className = 'navbar'>
-            <Link to ='login'>
-                Login
-            </Link> <br/>
-            <Link to = 'recipes'>
+            <ul>
+           <li className="nav"> <Link to = 'recipes'>
             DIY at Home Brewery
-            </Link> <br/>
-            <Link to = '/'>
+            </Link> </li><br/>
+            <li className="nav"><Link to = '/'>
                 Home
-            </Link>
+            </Link></li>
+            </ul>
         </div>
     )
 }

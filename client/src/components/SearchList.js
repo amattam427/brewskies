@@ -9,6 +9,7 @@ function SearchList({setSearchTerm}){
     return (
         <div className = "search-filter">
             <input 
+                className = "search"
                 type = 'text'
                 id = 'search'
                 placeholder = 'Search by state'
