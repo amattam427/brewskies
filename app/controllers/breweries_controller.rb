@@ -1,7 +1,14 @@
 class BreweriesController < ApplicationController
+    #  skip_before_action :authorize, except: [:create, :destroy, :my_breweries]
    
     def index
         render json: Brewery.all
+    end
+
+    def my_breweries
+        breweries = current_user.breweries
+        render json: breweries, status: :ok, serializer: CustomBrewerySerializer
+
     end
 
     def show
@@ -34,6 +41,10 @@ class BreweriesController < ApplicationController
     def brewery_params
         params.permit(:name, :street, :city, :state, :phone_number, :image)
     end
+
+    # def find_mine
+    #     current_user.breweries.find(params[:id])
+    # end
 
     def find_brewery
         Brewery.find(params[:id])

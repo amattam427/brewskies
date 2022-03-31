@@ -5,7 +5,7 @@ import BeersPageList from './BeersPageList';
 
 
 
-function BeersPage(){
+function BeersPage({user}){
     const id = parseInt (useParams().id);
     //console.log(typeof id)
     const [beers, setBeers] = useState ([])
@@ -17,13 +17,7 @@ function BeersPage(){
         beerstyle: "",
     });
 
-   
 
-
-    // const [name, setName] = useState("")
-    // const [image, setImage] = useState("")
-    // const [flavor, setFlavor] = useState("")
-    // const [style, setStyle] = useState("")
 
     useEffect (()=>{
         fetch(`/breweries/${id}/beers`)
@@ -83,6 +77,22 @@ function BeersPage(){
             .then((newBeer)=>onAddBeer(newBeer))
   
     }
+    let newBeerForm 
+        if (user){
+            newBeerForm = <> 
+            <h3>Add a New Beer</h3>
+              <form onSubmit={handleBeerSubmit}>
+                <input className="beer-name" type="text" name="name" placeholder="Name of Beer" value={formData.name} onChange={handleChange}/>
+                <input className="beer-image" type="text" name="image" placeholder="Image of Beer" value={formData.image} onChange={handleChange}/>
+                <input className="beer-flavor" type="text" name="flavor" placeholder="Flavor - i.e 'Fruity'" value={formData.flavor} onChange={handleChange}/>
+                <input className="beer-style" type="text" name="beerstyle" placeholder="Type/Style of beer - i.e 'Lager, Porter'" value={formData.beerstyle} onChange={handleChange}/>
+                <button type="submit">Add</button>
+            </form>
+            </>
+        } 
+        if (!user){
+            newBeerForm = <></>
+        }
 
 
 
@@ -90,17 +100,11 @@ function BeersPage(){
 
     return (
         <div className="brewery-beers">
-              <h3>Add a New Beer</h3>
-            <form onSubmit={handleBeerSubmit}>
-                <input className="beer-name" type="text" name="name" placeholder="Name of Beer" value={formData.name} onChange={handleChange}/>
-                <input className="beer-image" type="text" name="image" placeholder="Image of Beer" value={formData.image} onChange={handleChange}/>
-                <input className="beer-flavor" type="text" name="flavor" placeholder="Flavor - i.e 'Fruity'" value={formData.flavor} onChange={handleChange}/>
-                <input className="beer-style" type="text" name="beerstyle" placeholder="Type/Style of beer - i.e 'Lager, Porter'" value={formData.beer_style} onChange={handleChange}/>
-                <button type="submit">Add</button>
-            </form>
-            
-        {/* <div>{beerList}</div> */}
-        <BeersPageList beers = {beers} onDeleteBeer={handleDeleteBeer}/>
+              
+    {newBeerForm}
+           
+
+        <BeersPageList beers = {beers} user = {user} onDeleteBeer={handleDeleteBeer}/>
            
 
         </div>

@@ -6,6 +6,9 @@ function NavBar(){
 
     return(
         <div className = 'navbar'>
+            <Link to ='login'>
+                Login
+            </Link> <br/>
             <Link to = 'recipes'>
             DIY at Home Brewery
             </Link> <br/>

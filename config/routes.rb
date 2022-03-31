@@ -10,10 +10,12 @@ Rails.application.routes.draw do
   get "/breweries/:id/beers", to: "beers#brewery_beers"
   get "beers/:id/reviews", to: "reviews#beer_reviews"
 
-  # get "/me", to: "users#show_me"
+  # get "/mybreweries", to: "breweries#my_breweries"
 
-  # post "/login", to: "sessions#login"
-  # delete "/logout", to: "sessions#logout"
+  get "/me", to: "users#show_me"
+
+  post "/login", to: "sessions#login"
+  delete "/logout", to: "sessions#logout"
 
 
 

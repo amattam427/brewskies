@@ -8,6 +8,8 @@ function RecipeItem ({id, name, description, image, ingredients}){
         height: '450px' 
      }
 
+
+     console.log(ingredients.malt)
     return (
         <div className="recipe-list">
             <h2 className="recipe-name">{name}</h2>
@@ -16,7 +18,15 @@ function RecipeItem ({id, name, description, image, ingredients}){
             <img className= "recipe-image" style={imageSize} src={image} alt={name}/><br/>
             <h3>Ingredients</h3>
             <ul>
-                <li></li>
+                
+                {ingredients.malt.map((i)=>(
+                    <li key = {i.id}>{i.name} <br/></li>
+                ))}
+                {ingredients.hops.map((i)=>(
+                    <li key = {i.id}>{i.name}</li>
+                ))}
+
+                
             </ul>
             </div>
         </div>
