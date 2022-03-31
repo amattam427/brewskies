@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 //import BeersReviewPage from './BeersReviewPage';
 
 
-function BeersPageItem({id, name, image, flavor, style, onDeleteBeer}){
+function BeersPageItem({user, id, name, image, flavor, style, onDeleteBeer}){
 
     function handleDeleteBeer(){
         fetch(`/beers/${id}`, {
@@ -18,6 +18,15 @@ function BeersPageItem({id, name, image, flavor, style, onDeleteBeer}){
         height: '300px' 
      }
 
+     let deleteBeer 
+        if (user){
+            deleteBeer = <> 
+            <button onClick={handleDeleteBeer}>Delete</button>
+            </>
+        }
+        if (!user){
+            deleteBeer = <> </>
+        }
      
 
 
@@ -28,8 +37,7 @@ function BeersPageItem({id, name, image, flavor, style, onDeleteBeer}){
             <h3>Style: {style}</h3>
             <div className="beer-image">
             <img style={imageSize}  src = {image} alt = {name}/> <br/>
-            
-            <button onClick={handleDeleteBeer}>Delete</button>
+            {deleteBeer}
             <Link to = {`beer/${id}`}>
             <button>Reviews</button>
             </Link>

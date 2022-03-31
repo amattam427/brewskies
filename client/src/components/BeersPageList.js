@@ -2,7 +2,7 @@ import React from 'react';
 import BeersPageItem from './BeersPageItem';
 
 
-function BeersPageList({beers, onDeleteBeer}){
+function BeersPageList({beers, onDeleteBeer, user}){
 
     return (
         <div>
@@ -16,6 +16,7 @@ function BeersPageList({beers, onDeleteBeer}){
                         flavor = {beer.flavor}
                         style = {beer.beer_style}
                         onDeleteBeer={onDeleteBeer}
+                        user={user}
 
                         />
                 )

@@ -2,7 +2,7 @@ import React from 'react';
 import RecipeItem from './RecipeItem';
 
 function RecipeList({beerRecipe}) {
-    console.log(beerRecipe[0])
+    //console.log(beerRecipe[0])
 
     return (
         <div>

@@ -9,15 +9,14 @@ class UsersController < ApplicationController
         render json: User.all
     end
 
-    def show
-        user = find_user
-        render json: user
-    end
-
-
-    # def show_me
-    #     render json: current_user, status: :ok
+    # def show
+    #     render json: current_user
     # end
+
+
+    def show_me
+        render json: current_user, status: :ok
+    end
 
     def create
         user = User.create!(user_params)
